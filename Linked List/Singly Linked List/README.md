@@ -5,3 +5,8 @@
           https://www.youtube.com/watch?v=jgqg6Qw68_Q&t=214s
 
 <h3>2.See My Codes here in cpp in both method classes and object and in structures also :-
+<h4>Classes:-</h4>
+<h5>https://github.com/Nisha213-mar/README1.md/blob/main/Linked%20List/Singly%20Linked%20List/singly_linked_list.cpp</h5>
+<h4>Structure</h4>
+<h5>https://github.com/Nisha213-mar/README1.md/blob/main/Linked%20List/Singly%20Linked%20List/practice3.cpp</h5>
+
