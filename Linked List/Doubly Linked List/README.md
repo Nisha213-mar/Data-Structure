@@ -5,5 +5,6 @@
 <h1>PlayList Link</h1>
 [Tutorial]https://www.youtube.com/results?search_query=doubly+linked+list+neso+acadmey
 <h2>See My code through classes and object and structure here :-</h2>
-
+<h3>https://github.com/Nisha213-mar/README1.md/blob/main/Linked%20List/Doubly%20Linked%20List/doubly_linked_list.cpp</h3>
+<h3>https://github.com/Nisha213-mar/README1.md/blob/main/Linked%20List/Doubly%20Linked%20List/doubly_linked_list2.cpp</h3>
 
