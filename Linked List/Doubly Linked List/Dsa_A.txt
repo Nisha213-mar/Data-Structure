@@ -1,0 +1,7 @@
+1.	Sorting an Array of size 10.
+2.	Searching an element from an array using Binary search.
+3.	Print the duplicate values of an Array.
+4.	Search a particular element from the array and delete that element.
+5.	Accept n numbers from user. Create two arrays named Odd and Even. 
+       check the input values, if it is even then add it to even array ot
+        herwise add it in odd array.
