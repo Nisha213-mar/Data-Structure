@@ -9,3 +9,7 @@ A stack is an Abstract Data Type (ADT), commonly used in most programming langua
 1. Stack is abstract data type because it hides how it is implemented like using array or linked list. But it organizes data for efficient management and retrieval so it a data structure also.</h2>
 <h3>[Tutorial]https://www.youtube.com/results?search_query=neso+stack</h3>
 <h2>Here is my code :-</h2>
+<h4>https://github.com/Nisha213-mar/README1.md/blob/main/Stack/Stack_linkedL.cpp</h4>
+<h4>https://github.com/Nisha213-mar/README1.md/blob/main/Stack/stack.cpp</h4>
+<h4>https://github.com/Nisha213-mar/README1.md/blob/main/Stack/stack_linked.cpp</h4>
+<h4>https://github.com/Nisha213-mar/README1.md/blob/main/Stack/stack_neso1.cpp</h4>
