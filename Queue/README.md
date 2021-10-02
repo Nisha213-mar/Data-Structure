@@ -13,3 +13,6 @@
 <h2>Serving requests on a single shared resource, like a printer, CPU task scheduling etc. In real life scenario, Call Center phone systems uses Queues to hold people calling them in an order, until a service representative is free. Handling of interrupts in real-time systems.</h2>
 <h2>[Tutorial] https://www.youtube.com/results?search_query=queue+simple+snippets </h2>
 <h2>Here is my code :-</h2>
+<h4>https://github.com/Nisha213-mar/Data-Structure/blob/main/Queue/queue.cpp</h4>
+<h4>https://github.com/Nisha213-mar/Data-Structure/blob/main/Queue/QueueL.cpp</h4>
+<h4>https://github.com/Nisha213-mar/Data-Structure/blob/main/Queue/Queue_linked.cpp</h4>
