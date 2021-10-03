@@ -35,3 +35,54 @@ To convert infix expression to postfix expression, we will use the stack data st
 <h3>End</h3>
 <h1>Here is my Code</h1>
   <h4>https://github.com/Nisha213-mar/Data-Structure/blob/main/Stack/Implementation/stack1.cpp</h4>
+<h1>Postfix to Infix :</h1>
+<h2>Steps to Convert Postfix to Infix :</h2>
+<h3>1. Read the symbol from the input . ...</h3>
+<h3>2. If symbol is operand then push it into stack.</h3>
+<h3>3. If symbol is operator then pop top 2 values from the stack.</h3>
+<h3>4. this 2 popped value is our operand .</h3>
+<h3>5. create a new string and put the operator between this operand in string.</h3>
+<h3>6. push this string into stack.</h3>
+
+```cpp
+//Implementation of Postfix to Infix.
+#include<iostream>
+#include<stack>
+using namespace std;
+bool isOperand(char c){
+    if((c>='a'&& c<='z')||(c>='A' && c<='Z')){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+string PostfixToInfix(string postfix){
+    stack<string> s;
+    for(int i=0;i<postfix.length();i++){
+        if(isOperand(postfix[i])){
+            string op(1,postfix[i]);
+            s.push(op);
+        }
+        else{
+            string op1=s.top();
+            s.pop();
+            string op2=s.top();
+            s.pop();
+            s.push("("+ op2 +postfix[i]+ op1 + ")");
+        }
+    }
+    return s.top();
+
+}
+int main(){
+    string infix,postfix;
+    cout<<"Enter a Postfix Expression:"<<endl;
+    cin>>postfix;
+    cout<<"Postfix Expression:"<<postfix<<endl;
+    infix=PostfixToInfix(postfix);
+    cout<<endl<<"Infix Expression:"<<infix;
+    return 0;
+}
+
+```
