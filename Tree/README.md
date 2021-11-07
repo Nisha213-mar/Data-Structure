@@ -17,3 +17,10 @@
 <h2>Internal node: A node with at least one child is called Internal Node.
 Neighbour of a Node: Parent or child nodes of that node are called neighbors of that node.</h2>
 <h2>Subtree: Any node of the tree along with its descendant</h2>
+<h1>Types of Tee :</h1>
+<h2>General Tree. If no constraint is placed on the tree's hierarchy, a tree is called a general tree. ...</h2>
+<h3>Binary Tree. The binary tree is the kind of tree in which most two children can be found for each parent. ...</h3>
+<h3>Binary Search Tree. ...</h3>
+<h3>AVL Tree. ...</h3>
+<h3>Red-Black Tree. ...</h3>
+N-ary Tree.
