@@ -1,6 +1,6 @@
 <h1>Binary Tree :</h1>
 <h2>In computer science, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child. ... It is also possible to interpret a binary tree as an undirected, rather than a directed graph, in which case a binary tree is an ordered, rooted tree.</h2>
-<img src="(https://cdn.shortpixel.ai/client/to_avif,q_glossy,ret_img,w_1880/https://simplesnippets.tech/wp-content/uploads/2020/10/binary-tree-vs-binary-search-tree-diagram.png)">
+<img src="https://cdn.shortpixel.ai/client/to_avif,q_glossy,ret_img,w_1880/https://simplesnippets.tech/wp-content/uploads/2020/10/binary-tree-vs-binary-search-tree-diagram.png">
 
 <h1>Height of Binary Tree = 2^(h+1)-1</h1>
 <h1>Balance Binary Tree :</h1>
