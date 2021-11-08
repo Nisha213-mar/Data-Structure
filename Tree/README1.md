@@ -5,8 +5,11 @@
 
 <h1>Height of Binary Tree = 2^(h+1)-1</h1>
 <h1>Balance Binary Tree :</h1>
+<img src="https://helloacm.com/wp-content/uploads/2016/04/balanced-tree-or-not.png">
 <h2>Height-balanced binary tree : is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1. Example : Input : 1 / \ 2 3 Return : True or 1 Input 2 : 3 / 2 / 1 Return : False or 0 Because for the root node, left subtree has depth 2 and right subtree has depth 0.</h2>
 <h1>Dense Tree and Sparse Tree:</h1>
+<img src="https://simplesnippets.tech/wp-content/uploads/2020/10/binary-tree-sparse-vs-dense.png">
+
 <h2>A dense binary tree is close to perfect (it has close to 2^(h + 1) - 1 nodes) . A sparse tree is closer to a linked list (it has close to h nodes). h is the height of the tree where a single root node has height 0.</h2>
 <h2>Note : In Sparse tree the time required should be high.</h2>
 <h1>How we Implement Binary Tree data Structure :</h1>
