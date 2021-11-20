@@ -13,7 +13,7 @@
 <h2>6. Print Pre-Order Traversal (NODE, LEFT, RIGHT)</h2>
 <h2>7. Print In-Order Traversal (LEFT, NODE, RIGHT)</h2>
 <h2>8. Print Post-Order Traversal (LEFT, RIGHT, NODE)</h2>
-<h2>9. Print all Paths from Root to Leaf Nodes</h2>
+<h2>9. print Nodes at a given level</h2>
 <h2>10. Search in Binary Search Tree (Iterative Approach)</h2>
 <h2>11. Search in Binary Search Tree (Recursive Approach)</h2>
 <h2>12. Delete Node</h2>
@@ -93,3 +93,248 @@ public:
   }
 
 ```
+<h1>2 - Insert a Node(Recursive Approach) :</h1>
+<h3>[Video Reference] (https://youtu.be/x6t1lKzjGhY)</h3>
+<img src="https://i.ibb.co/vcbxQjB/bst-insert-recursive.png">
+
+```cpp
+//Insert the Node through recursive Method
+  TreeNode* insertRecursive(TreeNode *r, TreeNode *new_node)
+	{
+		if(r==NULL)
+		{
+			r=new_node;
+			cout <<"Insertion successful"<<endl;
+			return r;
+		}
+
+		if(new_node->value < r->value)
+		{
+			r->left = insertRecursive(r->left,new_node);
+		}
+		else if (new_node->value > r->value)
+		{
+			r->right = insertRecursive(r->right,new_node);
+		}
+	   else
+	   {
+	     	cout << "No duplicate values allowed!" << endl;
+	     	return r;
+		}
+		return r;
+	}
+  ```
+  <h1>4 - Print 2D :</h1>
+  <h3>[Video Reference] (https://youtu.be/xhkSiIeTKQo)</h3>
+<img src="https://i.ytimg.com/vi/xhkSiIeTKQo/maxresdefault.jpg">
+
+```cpp
+void print2D(TreeNode * r, int space) {
+    if (r == NULL) // Base case  1
+      return;
+    space += SPACE; // Increase distance between levels   2
+    print2D(r -> right, space); // Process right child first 3
+    cout << endl;
+    for (int i = SPACE; i < space; i++) // 5
+      cout << " "; // 5.1
+    cout << r -> value << "\n"; // 6
+    print2D(r -> left, space); // Process left child  7
+  }
+  ```
+  <h1>5 - Height of Tree :</h1>
+  <h3>[Video Reference] (https://www.youtube.com/watch?v=M-ovXwd6_0I)</h3>
+  <img src="https://i.ytimg.com/vi/_pnqMz5nrRs/maxresdefault.jpg">
+
+  ```cpp
+  // Find Height of Tree Node
+    int height(TreeNode *r){
+        if(r==NULL)
+            return -1;
+        else{
+                //Compute height of each subtree
+            int lheight=height(r->left);
+            int rheight=height(r->right);
+        //use the larger one
+        if(lheight>rheight)
+            return(lheight+1);
+        else
+            return(rheight+1);
+        }
+    }
+   ```
+   <h1>Print Pre-Order Traversal (NODE, LEFT, RIGHT) :</h1>
+  <h3>[Video Reference] (https://youtu.be/Pj5w6qnCXes)</h3>
+  <img src="https://i.ibb.co/Dz3mVrv/preorder.png">
+
+  ```cpp
+  //print Preorder
+    void Printpreorder(TreeNode *r){
+        if(r==NULL)
+            return;
+        cout<<r->value<<" ";
+        Printpreorder(r->left);
+        Printpreorder(r->right);
+    }
+```
+<h1>7. Print In-Order Traversal (LEFT, NODE, RIGHT)</h1>
+<h3>[Video Reference](https://www.youtube.com/watch?v=KIVdqquGehY)</h3>
+<img src="https://i.ibb.co/nDmK5q2/inorder.png">
+
+```cpp
+//Print Inorder
+    void PrintInorder(TreeNode *r){
+        if(r==NULL)
+            return;
+        PrintInorder(r->left);
+        cout<<r->value<<" ";
+        PrintInorder(r->right);
+    }
+```
+<h1>8. Print Post-Order Traversal (LEFT, RIGHT, NODE)</h1>
+<h3>[Video Reference](https://www.youtube.com/watch?v=fC3s5Pj2KuE)</h3>
+<img src="https://i.ibb.co/841kbrF/postorder.png">
+
+```cpp
+ void PrintPostorder(TreeNode *r){
+        if(r==NULL)
+            return;
+        PrintPostorder(r->left);
+        PrintPostorder(r->right);
+        cout<<r->value<<" ";
+    }
+```
+<h1>9. print Nodes at a given level </h1>
+<img src="https://media.cheggcdn.com/study/0fd/0fd1fe97-c205-4eb9-948a-bcd124d3c1c7/image.png">
+
+```cpp
+//print Nodes at a given level
+    void printGivenLevel(TreeNode *r,int level){
+        if(r==NULL)
+            return;
+        else if(level==0)
+            cout<<r->value<<" ";
+        else{//level>0
+            printGivenLevel(r->left,level-1);
+            printGivenLevel(r->right,level-1);
+        }
+    }
+    void printLevelOrderBFS(TreeNode *r){
+        int h=height(r);//calculate height of Tree
+        for(int i=0;i<=h;i++){
+            printGivenLevel(r,i);
+        }
+    }
+```
+
+<h1>10. Search in Binary Search Tree (Iterative Approach)</h1>
+<h3>[Video Reference](https://youtu.be/adBuxEjVwYk)</h3>
+<img src="https://i.ibb.co/h7FdKrf/searchiterative.png">
+
+```cpp
+//Iterative search
+    TreeNode *iterativeSearch(int val){
+        if(root==NULL)
+            return root;
+        else{
+            TreeNode *temp=root;
+            while(temp!=NULL){
+                if(val==temp->value)
+                    return temp;
+                else if(val<temp->value)
+                    temp=temp->left;
+                else
+                    temp=temp->right;
+            }
+
+        return NULL;
+        }
+    }
+```
+<h1>11 - Search in Binary Search Tree (Recursive Approach)</h1>
+<h3>[Video Reference](https://youtu.be/kU9Lv3e_kxs)</h3>
+
+```cpp
+//Insert the Node through recursive Method
+  TreeNode* insertRecursive(TreeNode *r, TreeNode *new_node)
+	{
+		if(r==NULL)
+		{
+			r=new_node;
+			cout <<"Insertion successful"<<endl;
+			return r;
+		}
+
+		if(new_node->value < r->value)
+		{
+			r->left = insertRecursive(r->left,new_node);
+		}
+		else if (new_node->value > r->value)
+		{
+			r->right = insertRecursive(r->right,new_node);
+		}
+	   else
+	   {
+	     	cout << "No duplicate values allowed!" << endl;
+	     	return r;
+		}
+		return r;
+	}
+```
+<h2>12. Delete Node :</h2>
+<h3>[Video Reference](https://youtu.be/5_AZcOOc-kM)</h3>
+
+```cpp
+TreeNode *deleteNode(TreeNode *r,int v){
+        //base case
+        if(r==NULL){
+            return NULL;
+        }
+        else if(v<r->value){
+            r->left=deleteNode(r->left,v);
+        }
+        else if(v > r->value){
+            r->right=deleteNode(r->right,v);
+        }
+        else{
+            if(r->left==NULL){
+                TreeNode *temp=r->right;
+                delete r;
+                return temp;
+            }
+            else if(r->right==NULL){
+                TreeNode *temp=r->left;
+                delete r;
+                return temp;
+            }
+            else{
+                TreeNode *temp=minValueNode(r->right);
+                r->value=temp->value;
+                r->right=deleteNode(r->right,temp->value);
+            }
+        }
+        return r;
+    }
+};
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
