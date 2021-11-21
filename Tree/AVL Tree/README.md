@@ -15,3 +15,55 @@
 
 ![AVL Tree Rotation](https://user-images.githubusercontent.com/64855541/122770456-1522f400-d2c3-11eb-9d95-7bba74a9afc8.jpg)
 [AVL Tree Rotation.pdf](https://github.com/thepranaygupta/Data-Structures-and-Algorithms/files/6686954/AVL.Tree.Rotation.pdf)
+<h1>INSERTION IN AVL TREE</h1>
+
+<h3>Step 1 (Optional) : [Theoretical Insertion in AVL Tree](https://youtu.be/f0BplF93TIA)</h3>
+
+<h3>Step 2 : [Practical Insertion in AVL Tree dry run + code](https://youtu.be/otiDcwZbCo4)</h3>
+
+```cpp
+//Insert The Node in AVL Tree
+TreeNode* insertRecursive(TreeNode *r, TreeNode *new_node)
+	{
+		if(r==NULL)
+		{
+			r=new_node;
+			cout <<"Insertion successful"<<endl;
+			return r;
+		}
+
+		if(new_node->value < r->value)
+		{
+			r->left = insertRecursive(r->left,new_node);
+		}
+		else if (new_node->value > r->value)
+		{
+			r->right = insertRecursive(r->right,new_node);
+		}
+	   else
+	   {
+	     	cout << "No duplicate values allowed!" << endl;
+	     	return r;
+		}
+		int bf=getBlanceFactor(r);
+		//Left Left case
+		if(bf>1 && new_node->value<r->left->value)
+            return rightRotate(r);
+        //Right Right case
+        if(bf<-1 && new_node->value>r->right->value)
+            return leftRotate(r);
+        //left Right case
+        if(bf>1 && new_node->value>r->left->value){
+            r->left=leftRotate(r->left);
+            return rightRotate(r);
+        }
+        //Right Left Case
+        if(bf<-1 && new_node->value<r->right->value){
+            r->right=rightRotate(r->right);
+            return leftRotate(r);
+        }
+        //return the unchanged node pointer
+        return r;
+
+	}
+```
