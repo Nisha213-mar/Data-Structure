@@ -316,6 +316,38 @@ TreeNode *deleteNode(TreeNode *r,int v){
     }
 };
 ```
+<h1>13.Check Weather tree is balanced or not:</h1>
+<h3>[Video Reference]:(https://www.youtube.com/watch?v=lUDgp2D6sf8)</h3>
+
+```cpp
+//Get Balance Factor
+int getBlanceFactor(TreeNode *n){
+    if(n==NULL){
+        return -1;
+    return height(n->left)-height(n->right);
+    }
+}
+//For Right Rotation
+TreeNode *rightRotate(TreeNode *y){
+    TreeNode *x=y->left;
+    TreeNode *T2=x->right;
+    //Perform Rotation
+    x->right=y;
+    y->left=T2;
+
+    return x;
+}
+//For Left Rotation
+TreeNode *leftRotate(TreeNode *x){
+    TreeNode *y=x->right;
+    TreeNode *T2=y->left;
+    //Perform Rotation
+    y->left=x;
+    x->right=T2;
+
+    return y;
+}
+```
 
 
 
