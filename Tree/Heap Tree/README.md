@@ -58,4 +58,19 @@ int parent(int i){
         }
     }
 ```
+<h1>2. Display Heap</h1>
 
+```cpp
+void PrintArray(){
+        for(int i=0;i<heap_size;i++)
+            cout<<harr[i]<<" ";
+        cout<<endl;
+    }
+```
+<h1>3. Height of Heap Tree </h1>
+
+```cpp
+int height(){
+        return ceil(log2(heap_size+1))-1;
+    }
+```
