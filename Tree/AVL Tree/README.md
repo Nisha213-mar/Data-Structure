@@ -67,3 +67,59 @@ TreeNode* insertRecursive(TreeNode *r, TreeNode *new_node)
 
 	}
 ```
+<h1>DELETION IN AVL TREE :</h1>
+<img src="https://user-images.githubusercontent.com/64855541/122783991-b021cb00-d2cf-11eb-8af2-00c64f83af94.png">
+<h3>Step 1: [Practical Implementation of Deletion in AVL Tree](https://youtu.be/3UivJWAFaI4)</h3>
+
+```cpp
+//Deletion in AVL Tree
+	TreeNode *deleteNode(TreeNode *r,int v){
+        //base case
+        if(r==NULL){
+            return NULL;
+        }
+        else if(v<r->value){
+            r->left=deleteNode(r->left,v);
+        }
+        else if(v > r->value){
+            r->right=deleteNode(r->right,v);
+        }
+        else{
+            if(r->left==NULL){
+                TreeNode *temp=r->right;
+                delete r;
+                return temp;
+            }
+            else if(r->right==NULL){
+                TreeNode *temp=r->left;
+                delete r;
+                return temp;
+            }
+            else{
+                TreeNode *temp=minValueNode(r->right);
+                r->value=temp->value;
+                r->right=deleteNode(r->right,temp->value);
+            }
+        }
+        int bf=getBlanceFactor(r);
+        //left left imbalance/case or right rotation
+        if(bf==2 && getBlanceFactor(r->left)>=0)
+            return rightRotate(r);
+        //LR Rotation
+        else if(bf==2 && getBlanceFactor(r->left)==-1){
+            r->left=leftRotate(r->left);
+            return rightRotate(r);
+        }
+        // right right imbalance case or left rotation
+        else if(bf==-2 && getBlanceFactor(r->right)<=-0)
+            return leftRotate(r);
+        //left left imbalance case or rl rotation
+        else if(bf==-2 && getBlanceFactor(r->right)==1){
+            r->right=rightRotate(r->right);
+            return leftRotate(r);
+        }
+        return r;
+    }
+```
+<h1>See my Full Implementation Code here :</h1>
+<h2>Thankyou</h2>
