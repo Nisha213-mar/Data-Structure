@@ -8,7 +8,7 @@
 <h3>2.See My Codes here in cpp in both method classes and object and structure :-</h3>
 <h3><a href="https://github.com/Nisha213-mar/README1.md/blob/main/Linked%20List/Singly%20Linked%20List/singly_linked_list.cpp">CLASSES</a></h3>
 <h4><a href="https://github.com/Nisha213-mar/README1.md/blob/main/Linked%20List/Singly%20Linked%20List/practice3.cpp">STRUCTURES</a></h5>
-<h3>3. Linked List Imolementation in C Language :</h3>
+<h3>3. Linked List Implementation in C Language :</h3>
 <<<<<<< HEAD
 =======
 
